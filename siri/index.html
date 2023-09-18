@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>如何将chatgpt接入siri? | Marcs</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://clongnb.tk/favicon.ico?v=1695015420119">
+<link rel="stylesheet" href="https://clongnb.tk/styles/main.css">
+
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4CQQ9VEZN0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-4CQQ9VEZN0');
+</script>
+
+
+    <meta name="description" content="OpenAI发布chatgpt之后，我被这个大型人工智能语言模型震撼到了，只可惜它的交互形式只有文字，不过openAI提供了api，我们完全可以将其接入语音助手比如siri当中进行交互。
+01获取API
+1首先，在chatgpt平台上创建一..." />
+    <meta name="keywords" content="教程" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4921590542143623"
+     crossorigin="anonymous"></script>
+  </head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4CQQ9VEZN0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-4CQQ9VEZN0');
+  </script>
+   <script>
+  (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      }
+      else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+  })();
+  </script>
+
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://clongnb.tk">
+        <img src="https://clongnb.tk/images/avatar.png?v=1695015420119" class="site-logo">
+        <h1 class="site-title">Marcs</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+          <a class="social-link" href="https://github.com/folbird" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+        
+      
+        
+      
+        
+      
+        
+          <a class="social-link" href="https://www.zhihu.com/people/long-min-26" target="_blank">
+            <i class="fab fa-zhihu"></i>
+          </a>
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      愿人人都能不吝啬于分享
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://clongnb.tk/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">如何将chatgpt接入siri?</h2>
+            <div class="post-date">2023-04-01</div>
+            
+              <div class="feature-container" style="background-image: url('https://clongnb.tk/post-images/siri.png')">
+              </div>
+            
+            <div class="post-content" v-pre>
+              <p>OpenAI发布chatgpt之后，我被这个大型人工智能语言模型震撼到了，只可惜它的交互形式只有文字，不过openAI提供了api，我们完全可以将其接入语音助手比如siri当中进行交互。</p>
+<h2 id="01获取api"><strong>01获取API</strong></h2>
+<h3 id="1首先在chatgpt平台上创建一个新的app在app中选择创建api填写相关信息如访问密钥和api-url等">1首先，在chatgpt平台上创建一个新的app，在app中，选择“创建API”，填写相关信息，如访问密钥和API URL等。</h3>
+<img src="https://pic.peo.pw/a/2023/04/30/644e74a70db4b.png" alt="1" width=80%/>
+<h3 id="2把这个key记录下来">2把这个key记录下来</h3>
+<img src="https://pic.peo.pw/a/2023/04/30/644e74a89d11a.png" alt="1" width=80%/>
+<h2 id="02编码获取url"><strong>02编码获取URL</strong></h2>
+<h3 id="1登录aircode平台创建hellojs文件">1登录Aircode平台创建hello.js文件。</h3>
+<img src="https://pic.peo.pw/a/2023/04/30/644e74a5721f4.png" alt="1" width=80%/>
+<h3 id="2ctrlcctrlv敲入代码">2Ctrl+C，Ctrl+V敲入代码</h3>
+<pre><code>//来自大佬：https://aircode.cool/828668wg5a// @see https://docs.aircode.io/guide/functions/const aircode = require('aircode');const { Configuration, OpenAIApi } = require('openai');const { v4: uuidv4 } = require('uuid');const { db } = aircode;const ChatTable = db.table('chat');// Setup OpenAI configurationsconst OPENAI_KEY = process.env.OPENAI_KEY || &quot;&quot;;const OPENAI_MODEL = process.env.MODEL || &quot;gpt-3.5-turbo&quot;;const MAX_MESSAGES_PER_CHAT = 40;const systemContent = 'You are a helpful assistant.';module.exports = async function(params, context) {  console.log('Received params:', params);  const { question, cid } = params;// Create a chat ID if not provided  const chatId = cid ? cid : uuidv4();// Save user's question to the ChatTable  await ChatTable.save({ chatId, role: 'user', content: question });// Retrieve chat history  const chats = await ChatTable    .where({ chatId })    .sort({ createdAt: -1 })    .limit(MAX_MESSAGES_PER_CHAT)    .find();// Construct message array for GPT-3.5 Turbo  const messages = [    { role: 'system', content: 'You are a helpful assistant.' },    ...chats.reverse().map(one =&gt; ({ role: one.role, content: one.content })),  ];  const openai = new OpenAIApi(new Configuration({ apiKey: OPENAI_KEY }));  try {// Request completion from GPT-3.5 Turbo    const completion = await openai.createChatCompletion({      model: OPENAI_MODEL,      messages,      temperature: 1,      n: 1,      stream: false,    });    const responseMessage = completion.data.choices[0].message;// Save generated response to ChatTable    await ChatTable.save({ chatId, ...responseMessage });// Return response message and chat ID    return { reply: responseMessage.content, cid: chatId };  } catch (error) {// Set the response status to 500 (Internal Server Error)    context.status(500);// Log the error    console.log('error', error.response || error);// Initialize an error message variable    let errorMessage;// If there is a response object in the error,// it means the request was made and the server responded with an error status    if (error.response) {      const { status, statusText, data } = error.response;      if (status === 401) {// If the status code is 401, set a specific error message related to the OpenAI API key        errorMessage = 'Unauthorized: Invalid OpenAI API key, please check your API key in the AirCode Environments tab.';      } else if (data.error &amp;&amp; data.error.message) {// If there is an error message in the data, use it as the error message        errorMessage = data.error.message;      } else {// Otherwise, use the status code and status text as the error message        errorMessage = `Request failed with status code ${status}: ${statusText}`;      }    } else if (error.request) {// If there is a request object in the error,// it means the request was made but no response was received      errorMessage = 'No response received from the server';    } else if (error.code === 'ENOTFOUND' || error.code === 'ECONNREFUSED') {// If there is a network error, such as DNS resolution or connection refused      errorMessage = `Network error: ${error.message}`;    } else {// If none of the above conditions are met,// it means there was an error setting up the request      errorMessage = `Request setup error: ${error.message}`;    }// Return an object containing the error message    return { error: errorMessage };  }};
+</code></pre>
+<h3 id="3将你的key值填入environment中然后点击部署">3将你的key值填入environment中然后点击部署</h3>
+<h3 id="4部署完之后会弹出一个url记录这个url后续要复制到指令文本当中">4部署完之后会弹出一个url，记录这个url，后续要复制到指令文本当中</h3>
+<img src="https://pic.peo.pw/a/2023/04/30/644e74a4edadd.png" alt="1" width=80%/>
+<img src="https://pic.peo.pw/a/2023/04/30/644e74a81a339.png" alt="1" width=80%/>
+<h2 id="03添加快捷指令"><strong>03添加快捷指令</strong></h2>
+<h3 id="1在safari浏览器中打开这个网址然后添加指令">1在safari浏览器中打开这个网址，然后添加指令</h3>
+<p><strong>https://www.icloud.com/shortcuts/96820bde426948918c25ed0d7a4c548f</strong></p>
+<h3 id="2添加完后点击打开机器人快捷指令右上角编辑将02步骤获取的url填入文本区域之后就点击蓝色小三角就行了">2添加完后点击“打开机器人”快捷指令右上角编辑，将<strong>02步骤</strong>获取的url填入文本区域，之后就点击蓝色小三角就行了。</h3>
+<img src="https://pic.peo.pw/a/2023/04/30/644e74a6f0f43.jpg" alt="1" width=40%/>
+完成后，对Siri说“hei siri,打开机器人”(当然你也可以更改更加骚气的指令名称)，即可调用Chatgpt实现更加高效的语音交互功能。
+<img src="https://pic.peo.pw/a/2023/04/30/644e74a858684.png" alt="1" width=80%/>
+**没有OpenAI账号的话也可以试试国内的，步骤是一样的。**
+<p><strong>https://chat.forchange.cn/</strong></p>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://clongnb.tk/56SoXbZ8V/" class="tag">
+                    教程
+                  </a>
+                
+              </div>
+            
+            
+
+            
+              
+                <div id="gitalk-container" data-aos="fade-in"></div>
+              
+
+              
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+  <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.1/build/highlight.min.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad()
+  </script>
+
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: '394f92b48a01a79c59bd',
+        clientSecret: '5368057b804e1a672974f0f17aa63b6290ebe8c7',
+        repo: 'github_blog',
+        owner: 'folbird',
+        admin: ['folbird'],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
+
+
+
+
+  </body>
+</html>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://clongnb.tk</id>
+    <title>Marcs</title>
+    <updated>2023-09-18T05:37:03.970Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://clongnb.tk"/>
+    <link rel="self" href="https://clongnb.tk/atom.xml"/>
+    <subtitle>愿人人都能不吝啬于分享</subtitle>
+    <logo>https://clongnb.tk/images/avatar.png</logo>
+    <icon>https://clongnb.tk/favicon.ico</icon>
+    <rights>All rights reserved 2023, Marcs</rights>
+    <entry>
+        <title type="html"><![CDATA[我活的像个影视剧里的负面人物]]></title>
+        <id>https://clongnb.tk/sad/</id>
+        <link href="https://clongnb.tk/sad/">
+        </link>
+        <updated>2023-09-18T05:13:59.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[定期输出一下]]></title>
+        <id>https://clongnb.tk/douban/</id>
+        <link href="https://clongnb.tk/douban/">
+        </link>
+        <updated>2023-08-11T07:33:28.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[开始自律]]></title>
+        <id>https://clongnb.tk/change/</id>
+        <link href="https://clongnb.tk/change/">
+        </link>
+        <updated>2023-07-01T01:11:05.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[讲一讲我用chatgpt干了些什么]]></title>
+        <id>https://clongnb.tk/chatgpt/</id>
+        <link href="https://clongnb.tk/chatgpt/">
+        </link>
+        <updated>2023-05-08T11:56:38.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[如何高质量逛小蓝鸟]]></title>
+        <id>https://clongnb.tk/twitter/</id>
+        <link href="https://clongnb.tk/twitter/">
+        </link>
+        <updated>2023-05-07T15:59:28.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[给大家介绍几种信用卡和国外接码平台]]></title>
+        <id>https://clongnb.tk/access/</id>
+        <link href="https://clongnb.tk/access/">
+        </link>
+        <updated>2023-05-06T02:41:08.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[欢迎大家来与我交流]]></title>
+        <id>https://clongnb.tk/communicate/</id>
+        <link href="https://clongnb.tk/communicate/">
+        </link>
+        <updated>2023-05-03T11:12:55.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[善用论坛拓展你的冲浪能力]]></title>
+        <id>https://clongnb.tk/forum/</id>
+        <link href="https://clongnb.tk/forum/">
+        </link>
+        <updated>2023-05-02T13:39:30.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[TeamGPT——打造你的AI“天团”]]></title>
+        <id>https://clongnb.tk/teamgpt/</id>
+        <link href="https://clongnb.tk/teamgpt/">
+        </link>
+        <updated>2023-05-02T11:02:04.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[人生一定要多认识有趣的人儿]]></title>
+        <id>https://clongnb.tk/friend/</id>
+        <link href="https://clongnb.tk/friend/">
+        </link>
+        <updated>2023-05-01T11:58:53.000Z</updated>
+    </entry>
+</feed>
